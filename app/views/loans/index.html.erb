@@ -1,0 +1,42 @@
+<div class="page-header">
+  <h1>
+    Loan Central
+    <a href="/loancentral/new" class="btn btn-lg btn-success">New Loan</a>
+    <a href="/loancentral/update" class="btn btn-lg btn-default">Update</a>
+     <a href="/loancentral/help" class="btn btn-lg btn-primary">Help</a>
+
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Item</th>
+        <th>Friend</th>
+        <th>Friend's Phone</th>
+        <th>Picture</th>
+        <th>Date Needed Back</th>
+      </tr>
+
+      <% @loans.each do |loan| %>
+      <tr>
+        <td><%= loan.item %></td>
+        <td><%= loan.friend %></td>
+        <td><%= loan.friend_phone %></td>
+        <td><img src="<%= loan.picture %>" height="120"> </td>
+        <td><%= loan.held %></td>
+           <td>
+
+          <a href="/deleteloan/<%= loan.id %>" class="btn btn-danger" rel="nofollow">Got it Back!</a>
+
+          <a href="/loancentral/message/<%= loan.id %>" class="btn btn-primary" rel="nofollow">Send reminder message</a>
+
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+

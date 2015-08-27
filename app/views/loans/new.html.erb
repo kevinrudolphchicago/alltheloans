@@ -1,0 +1,77 @@
+
+<div class="page-header">
+  <h3>Add Loan</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_loan" method="post" enctype="multipart/form-data">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <div class="form-group">
+        <label for="item" class="control-label">
+          Item
+        </label>
+        <input type="text" id="item" name="item" placeholder="Enter" class="form-control" value="<%= @loan.item %>">
+      </div>
+
+   <div class="form-group">
+        <label for="name" class="control-label">
+          Friend's Name
+        </label>
+        <input type="text" id="friend" name="friend" placeholder="Enter" class="form-control" value="<%= @loan.friend %>">
+      </div>
+
+        <div class="form-group">
+        <label for="name" class="control-label">
+          Friend's Phone # (Example: 13107214611)
+        </label>
+        <input type="text" id="friend_phone" name="friend_phone" placeholder="Please include the American interntional code (1) and an area code wihtout breaks or spaces. Ex: 13107214611" class="form-control" value="<%= @loan.friend_phone %>">
+      </div>
+
+
+ <div class="form-group">
+        <label for="picture" class="control-label">
+          Picture (optional)
+        </label>
+        <input type="file" id="picture" name="picture" placeholder="Enter" class="form-control" value="<%= @loan.picture %>">
+      </div>
+
+
+
+   <div class="form-group">
+        <label for="held" class=" control-label">
+          Date Needed Back
+        </label>
+        <div class=""
+        <input type="text" id="held" name="held" placeholder="Enter" class="form-control" value="<%= @loan.held %>">
+
+                <div class='input-group date' id='datetimepicker1'>
+                  <input type='text' class="form-control" name="held" id="held">
+                     <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+               </span>
+                  </div>
+                  </div>
+       </div>
+
+
+<script type="text/javascript">
+  $(function () {
+    $('#datetimepicker1').datetimepicker();
+  });
+</script>
+
+
+
+
+
+
+      <button class="btn btn-success">
+        Create Loan
+      </button>
+      or
+      <a href="/loancentral">Cancel</a>
+    </form>
+      <h3><center><b>Please Note: if you do not complete this form in full a loan will not be generated </b></center></h3>
+</div>

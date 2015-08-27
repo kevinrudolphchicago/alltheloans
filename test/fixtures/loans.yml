@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  friend: MyString
+  friend_phone: MyString
+  picture: MyString
+  dateloaned: MyString
+  datedue: MyString
+
+two:
+  item: MyString
+  friend: MyString
+  friend_phone: MyString
+  picture: MyString
+  dateloaned: MyString
+  datedue: MyString
