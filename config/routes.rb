@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   get "/loancentral", :controller => "loans", :action => "index"
 
-
   get "/deleteloan/:id", :controller => "loans", :action => "destroy"
 
   get "loancentral/message/:id", :controller => "loans", :action => "message"

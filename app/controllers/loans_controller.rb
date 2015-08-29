@@ -82,7 +82,7 @@ end
 
     end
 
-    redirect_to "/loancentral"
+    redirect_to "/loancentral", :notice => "update complete"
   end
 
 
